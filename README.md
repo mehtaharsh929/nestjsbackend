@@ -42,9 +42,9 @@ Follow the steps below to get the project up and running:
 1. Clone the Repository
 bash
 Copy code
-git clone https://github.com/your-repository-url.git
+git clone https://github.com/mehtaharsh929/nestjsbackend
 cd your-project-folder
-2. Install Dependencies
+3. Install Dependencies
 Run the following command to install the required dependencies:
 
 bash
