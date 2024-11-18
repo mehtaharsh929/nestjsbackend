@@ -1,86 +1,73 @@
-NestJS Backend: User Management, Document Management, and Ingestion Control
+# NestJS Backend: User Management, Document Management, and Ingestion Control
 
-Overview
-This backend service is built using NestJS to handle:
+## Overview
+This backend service, built using **NestJS**, handles the following core functionalities:
 
-User Authentication (Register, login, and role-based management)
-Document Management (CRUD operations with document upload functionality)
-Ingestion Control (Triggering ingestion process and managing ongoing ingestion tasks)
-The service also integrates with a Python backend for handling ingestion processes through API calls or webhooks.
+- **User Authentication**: Register, login, logout, and role-based management.
+- **User Management**: Manage user roles and permissions (Admin only).
+- **Document Management**: CRUD operations and file upload.
+- **Ingestion Control**: Trigger ingestion processes and manage ongoing tasks via integration with a Python backend.
 
-Key Features
-Authentication APIs:
+---
 
-Register, login, and logout.
-Handle different user roles (admin, editor, viewer).
-User Management APIs (Admin only):
+## Key Features
 
-Managing user roles and permissions.
-Document Management APIs:
+### **Authentication APIs**
+- Register, login, and logout.
+- Role-based access control (Admin, Editor, Viewer).
 
-CRUD operations for documents.
-Upload documents with Multer.
-Ingestion Trigger API:
+### **User Management APIs** (Admin only)
+- Create, update, delete, and manage user roles and permissions.
 
-Triggers the ingestion process in the Python backend.
-Ingestion Management API:
+### **Document Management APIs**
+- Perform CRUD operations on documents.
+- Upload documents using **Multer**.
 
-Tracks and manages ongoing ingestion processes.
-Tools & Libraries
-NestJS: Framework for building efficient and scalable server-side applications.
-TypeScript: For type-safe development.
-TypeORM: For interacting with the PostgreSQL database.
-PostgreSQL: Relational database for data storage.
-JWT: For secure token-based authentication.
-Multer: For handling file uploads.
-Passport: For authentication strategies (JWT).
-Bcrypt: For hashing passwords securely.
-Class-Validator & Class-Transformer: For data validation.
-Setup
-Follow the steps below to get the project up and running:
+### **Ingestion Management**
+- Trigger ingestion processes via API calls to a Python backend.
+- Track and manage ongoing ingestion tasks.
 
-1. Clone the Repository
-bash
-Copy code
+---
+
+## Tools & Libraries
+
+| **Tool/Library**   | **Purpose**                                      |
+|---------------------|--------------------------------------------------|
+| NestJS             | Framework for scalable server-side applications |
+| TypeScript         | Type-safe development                           |
+| TypeORM            | Database interaction with PostgreSQL            |
+| PostgreSQL         | Relational database                             |
+| JWT                | Secure token-based authentication               |
+| Multer             | File uploads                                    |
+| Passport           | Authentication strategies (JWT)                 |
+| Bcrypt             | Secure password hashing                         |
+| Class-Validator    | Data validation                                 |
+| Class-Transformer  | Data transformation                             |
+
+---
+
+## Setup Instructions
+
+### **1. Clone the Repository**
+```bash
 git clone https://github.com/mehtaharsh929/nestjsbackend
-cd your-project-folder
-3. Install Dependencies
+cd nestjsbackend
+
+### **2. Install Dependencies**
 Run the following command to install the required dependencies:
-
-bash
-Copy code
 npm install
-3. Configure Environment Variables
-Create a .env file in the root directory of the project. This file will contain the necessary environment variables for database connection and JWT configuration.
 
-bash
-Copy code
-DATABASE_HOST=localhost
-DATABASE_PORT=5432
-DATABASE_USERNAME=postgres
-DATABASE_NAME=postgres
-DATABASE_PASSWORD=root
-JWT_SECRET=your_secret_key
-JWT_EXPIRES_IN=3600
-Make sure to replace the values of DATABASE_HOST, DATABASE_PORT, DATABASE_USERNAME, DATABASE_PASSWORD, and JWT_SECRET with appropriate values based on your environment.
+### **3. Install Dependencies**
+Configure Environment Variables
+Create a .env file in the root directory of the project and add the following variables:
+DATABASE_HOST
+DATABASE_PORT
+DATABASE_USERNAME
+DATABASE_NAME
+DATABASE_PASSWORD
+JWT_SECRET
+JWT_EXPIRES_IN
 
-4. Database Setup
-Ensure that PostgreSQL is installed and running on your machine. You can create a new database using the following command:
-
-bash
-Copy code
-psql -U postgres -c "CREATE DATABASE postgres;"
-Alternatively, modify the DATABASE_NAME, DATABASE_USERNAME, and DATABASE_PASSWORD fields in the .env file to match your PostgreSQL setup.
-
-5. Run the Application
-Once the environment variables and database are configured, run the following command to start the application:
-
-bash
-Copy code
+### **5. Start the Application
 npm run start:dev
-This will start the application in development mode. You can access the API at http://localhost:3000
 
-Author
-Harsh Mehta
-
-For any inquiries or suggestions, feel free to contact me via email or GitHub.
