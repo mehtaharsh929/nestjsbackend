@@ -49,15 +49,18 @@ This backend service, built using **NestJS**, handles the following core functio
 ## Setup Instructions
 
 ### **1. Clone the Repository**
+
 git clone https://github.com/mehtaharsh929/nestjsbackend
 cd nestjsbackend
 
 ### **2. Install Dependencies**
+
 Run the following command to install the required dependencies:
 npm install
 
 ### **3. Configure Environment Variables**
 Create a .env file in the root directory of the project and add the following variables:
+
 DATABASE_HOST
 DATABASE_PORT
 DATABASE_USERNAME
@@ -67,5 +70,6 @@ JWT_SECRET
 JWT_EXPIRES_IN
 
 ### **4. Start the Application**
+
 npm run start:dev
 
