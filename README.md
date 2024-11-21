@@ -68,6 +68,6 @@ DATABASE_PASSWORD
 JWT_SECRET
 JWT_EXPIRES_IN
 
-### **5. Start the Application
+### **4. Start the Application
 npm run start:dev
 
