@@ -25,8 +25,6 @@ This backend service, built using **NestJS**, handles the following core functio
 
 ### **Ingestion Management**
 - Trigger ingestion processes via API calls to a Python backend.
-- Track and manage ongoing ingestion tasks.
-
 ---
 
 ## Tools & Libraries
@@ -42,8 +40,6 @@ This backend service, built using **NestJS**, handles the following core functio
 | Passport           | Authentication strategies (JWT)                 |
 | Bcrypt             | Secure password hashing                         |
 | Class-Validator    | Data validation                                 |
-| Class-Transformer  | Data transformation                             |
-
 ---
 
 ## Setup Instructions
