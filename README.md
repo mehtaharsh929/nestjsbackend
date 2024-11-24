@@ -118,15 +118,15 @@ dist
 
 Add a GitHub Actions workflow file at .github/workflows/deploy.yml:
 
-name: Deploy to AWS
+    name: Deploy to AWS
 
-on:
-push:
-branches: - main
+    on:
+    push:
+    branches: - main
 
-jobs:
-deploy:
-runs-on: ubuntu-latest
+    jobs:
+    deploy:
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
