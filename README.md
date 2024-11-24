@@ -40,6 +40,7 @@ This backend service, built using **NestJS**, handles the following core functio
 | Passport           | Authentication strategies (JWT)                 |
 | Bcrypt             | Secure password hashing                         |
 | Class-Validator    | Data validation                                 |
+| Jest               | Unit and integration testing framework          |
 ---
 
 ## Setup Instructions
@@ -57,15 +58,41 @@ npm install
 ### **3. Configure Environment Variables**
 Create a .env file in the root directory of the project and add the following variables:
 
-DATABASE_HOST
-DATABASE_PORT
-DATABASE_USERNAME
-DATABASE_NAME
-DATABASE_PASSWORD
-JWT_SECRET
-JWT_EXPIRES_IN
+DATABASE_HOST=<your-database-host>
+DATABASE_PORT=<your-database-port>
+DATABASE_USERNAME=<your-database-username>
+DATABASE_NAME=<your-database-name>
+DATABASE_PASSWORD=<your-database-password>
+JWT_SECRET=<your-jwt-secret>
+JWT_EXPIRES_IN=<jwt-expiration-time>
 
 ### **4. Start the Application**
 
 npm run start:dev
+
+## Testing the Application
+
+This project includes unit tests and integration tests for critical modules such as authentication, user management, and document management. Testing is configured using Jest and Supertest.
+
+### **1. To run all tests, execute**
+
+npm run test
+
+
+### **2. To run tests with a detailed report:**
+
+npm run test:verbose
+
+
+### **3. To run a specific test file**
+
+npm run test src/<module>/<file>.spec.ts
+
+
+### **4. To check test coverage:**
+
+npm run test:cov
+
+
+
 

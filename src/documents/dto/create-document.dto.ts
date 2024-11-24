@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty, IsOptional } from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional } from "class-validator";
 
 export class CreateDocumentDto {
   @IsString()
@@ -6,7 +6,7 @@ export class CreateDocumentDto {
   title: string;
 
   @IsString()
-  @IsOptional()  // Optional if not required, else make it required
+  @IsOptional() // Optional if not required, else make it required
   content: string;
 
   // We will not directly handle the file in the DTO, it's handled via Multer
