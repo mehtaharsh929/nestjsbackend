@@ -106,35 +106,6 @@ Deployment Using Docker and GitHub Actions on AWS
 
 Add a Dockerfile to the root directory
 
-# Use Node.js LTS as the base image
-
-FROM node:lts
-
-# Set the working directory inside the container
-
-WORKDIR /app
-
-# Copy package files and install dependencies
-
-COPY package\*.json ./
-RUN npm install --production
-
-# Copy the application source code
-
-COPY . .
-
-# Build the NestJS application
-
-RUN npm run build
-
-# Expose the application port
-
-EXPOSE 3000
-
-# Start the application
-
-CMD ["node", "dist/main"]
-
 Add a .dockerignore file
 
 node_modules
